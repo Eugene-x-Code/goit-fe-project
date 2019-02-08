@@ -1,0 +1,56 @@
+.info-sites {
+    @extend %main-font;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 62px;
+    position: relative;
+
+    &::before {
+        content: "GO IT";
+        position: absolute;
+        right: -24%;
+        top: 76%;
+        font-size: 182px;
+        font-family: $main-font-face;
+        font-weight: $font-ex-bold;
+        color: $bg-txt-color;
+        transform: rotate(90deg);
+        z-index: -1;    
+    }
+
+    &__title {
+        @extend %sect-title-font;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 16px;
+            height: 16px;
+            background: $main-fn-color;
+            top: -22px;
+        }
+    }
+
+    &__img {
+        @extend %img;
+        width: 416px;
+        object-fit: cover;
+    }
+
+    &__txt-wrapper {
+        width: 416px;
+        padding-top: 22px;
+    }
+
+    &__txt {
+        margin-top: 40px;
+        @extend %main-txt-font;
+    }
+
+    @media (max-width: 480px) {
+        &__img {
+           display: none;
+        }
+    }
+}

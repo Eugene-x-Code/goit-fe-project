@@ -1,0 +1,35 @@
+.main-title {
+    @extend %main-font;
+    @extend %main-title-font; 
+    margin-bottom: 34px;
+
+    &--fx {
+        display: inline-block;
+        margin-top: 4px;;
+        @extend %title-rev-fx;
+    }
+}
+
+.course-desc {
+    position: relative;
+    font-family: $main-font-face;
+    font-weight: $font-bold;
+    line-height: 27px;
+    font-size: 20px;
+    width: 358px;
+    padding-left: 104px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 6px;
+        left: 0;
+        width: 56px;
+        height: 8px;
+        background: $main-fn-color;
+    }
+}
+
+.main-desc {
+    margin-bottom: 58px;
+}

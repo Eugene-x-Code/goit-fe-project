@@ -1,0 +1,75 @@
+.requirements {
+    @extend %main-font;
+    margin-bottom: 160px;
+
+    &__title {
+        @extend %sect-title-font;
+        margin-bottom: 36px;
+    }
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__container-sl {
+        width: 558px;
+    }
+
+    &__slider {
+        position: relative;
+        @extend %main-txt-font;
+        box-shadow: $main-shadow;
+        display: block;
+        margin: 0 auto;
+        width: 480px;
+    }
+
+    &__desc {
+        box-sizing: border-box;
+        counter-reset: none;
+        counter-increment: b;
+        padding: 54px 50px 68px;
+
+        &::before {
+            content: "[ 00" counter(b) " ]";
+            @extend %main-font;
+            width: 48px;
+            height: 16px;
+            font-weight: $font-bold;
+            position: absolute;
+            text-align: center;
+            background: $accent-color;
+            color: $main-fn-color-rev;
+            transform: rotate(-90deg);
+            font-size: 12px;
+            line-height: 16px;
+            top: 72px;
+            left: 0;
+        }
+    }
+
+    &__img {
+        @extend %img;
+        width: 273px;
+    }
+
+    @media (max-width: 480px) {
+        &__img {
+           display: none;
+        }
+    }
+
+}
+
+.slider-btn-req {
+    top: 30%;
+
+    &--prev {
+        right: 494px;
+    }
+
+    &--next {
+        left: 494px;
+    }
+}

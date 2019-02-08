@@ -1,0 +1,39 @@
+.about-me {
+    @extend %main-font;
+    margin-bottom: 118px;
+
+    &__title{
+        @extend %sect-title-font;
+    }
+
+    &__slider {
+        width: 304px;
+        padding: 40px;
+        box-sizing: border-box;
+        margin: 0 auto;
+        position: relative;
+        @extend %main-txt-font;
+        box-shadow: $main-shadow;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 8px;
+            height: 8px;
+            background: $accent-color;
+            top: 16px;
+        }
+    }
+}
+
+.slider-btn {
+    top: 50%;
+
+    &--prev {
+        right: 328px;
+    }
+
+    &--next {
+        left: 328px;
+    }
+}

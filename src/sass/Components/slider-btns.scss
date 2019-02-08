@@ -1,0 +1,24 @@
+.slider-btn {
+    position: absolute;
+    @extend %btn-def-rem;
+
+    &:hover &__svg,
+    &:focus &__svg {
+        fill: $accent-color;
+    }
+
+    &__svg {
+        width: 20px;
+        height: 28px;
+        fill: $slider-btn-color;
+        transition: fill 200ms linear;
+    }
+
+    &--prev {
+        transform: rotate(180deg) translateY(50%);
+    }
+
+    &--next {
+        transform: translateY(-50%);
+    }
+}
