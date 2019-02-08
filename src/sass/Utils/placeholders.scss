@@ -1,0 +1,58 @@
+%title-rev-fx {
+    color: $main-fn-color-rev;
+    background-color: $main-fn-color;
+}
+
+%main-font {
+    font-family: $main-font-face;
+    color: $main-fn-color;
+}
+
+%main-txt-font {
+    font-size: 16px;
+    line-height: 25px;
+    font-weight: $font-reg;
+}
+
+%main-title-font {
+    font-size: 57px;
+    line-height: 67px;
+    font-weight: $font-ex-bold;
+}
+
+%sect-title-font {
+    font-size: 37px;
+    line-height: 50px;
+    font-weight: $font-ex-bold;
+}
+
+%btn-def-rem {
+    border: none;
+    background: none;
+}
+
+%img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+%link {
+    text-decoration: none;
+    display: block;
+}
+
+%list {
+    list-style: none;
+}
+
+%flex-list {
+    list-style: none;
+    display: flex;
+}
+
+%prog-font {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: $font-reg;
+}

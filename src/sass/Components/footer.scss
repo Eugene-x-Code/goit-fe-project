@@ -1,0 +1,139 @@
+.footer {
+    padding-top: 44px;
+}
+
+.price-list {
+    display: flex;
+    flex-wrap: wrap;
+    width: 416px;
+    margin: 0 auto;
+    box-shadow: $main-shadow;
+    margin-bottom: 52px;
+
+    &__wrapper--left {
+        font-family: $main-font-face;
+        flex-basis:48%;
+        text-align: right;
+        padding-top: 48px;
+    }
+
+    &__wrapper--right {
+        font-family: $main-font-face;
+        display: flex;
+        flex-direction: column;
+        flex-basis: 48%;
+        margin-left: 10px;
+        padding-top: 48px;
+    }
+
+    &__desc--fx {
+        @extend %title-rev-fx;    
+        font-weight: $font-ex-bold;
+        font-size: 12px;
+        display: inline-block;
+        text-align: right;
+        text-transform: uppercase;
+        line-height: 17px;
+        margin-top: 4px;
+    
+        &:first-child {
+            margin-top: 0;
+        }
+    
+        &:nth-child(2n+2) {
+            margin-top: 26px;
+        }
+    }
+
+    &__desc {
+        position: relative;
+        font-weight: $font-ex-bold;
+        font-size: 12px;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $main-fn-color;
+        line-height: 17px;
+        margin-top: 4px;
+    
+        &:first-child {
+            margin-top: 2px;
+        }
+    
+        &:nth-child(-2n+2) {
+            margin-top: 47px;
+        }
+    
+        &:nth-child(3n+3) {
+            margin-top: 25px;
+        }
+
+        &--old::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 70px;
+            left: 32px;
+            top: -29px;
+            width: 3px;
+            transform: rotate(79deg);
+            background-color: $accent-color;
+        }
+    }
+
+    &__bonus {
+        font-family: $main-font-face;
+        font-size: 14px;
+        font-weight: $font-reg;
+        color: $accent-color;
+        width: 244px;
+        padding-bottom: 60px;
+        position: relative;
+        margin-top: 20px;
+        padding-left: 40px;
+        line-height: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    
+        &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            height: 30px;
+            left: 10px;
+            top: 6px;
+            width: 3px;
+            transform: rotate(30deg);
+            background-color: $main-fn-color;
+        }
+    }
+}
+
+.reg-btn {
+    text-align: center;
+
+    &__link {
+        display: inline-block;
+        text-decoration: none;
+        text-align: center;
+        padding: 16px 30px;
+        text-transform: uppercase;
+        font-size: 13px;
+        line-height: 16px;
+        font-family: $main-font-face;
+        font-weight: $font-ex-bold;
+        letter-spacing: 0.1em;
+        background: $accent-color;
+        color: $main-fn-color-rev;
+        transition: box-shadow 200ms linear;
+        cursor: pointer;
+    
+        &:hover,
+        &:focus {
+            box-shadow: 0 8px 43px 0 rgba(255,107,8,.59);
+        }
+    }
+}
+
+.footer {
+    padding-bottom: 132px;
+}

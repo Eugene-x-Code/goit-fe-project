@@ -1,0 +1,47 @@
+.after-course {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 76px;
+
+    &__wrapper {
+        width: 414px;
+        @extend %main-font;
+        padding-top: 48px;
+    }
+
+    &__title {
+        @extend %sect-title-font;
+        margin-bottom: 34px;
+
+        &--fx {
+        @extend %title-rev-fx;
+        }
+    }
+
+    &__desc {
+        @extend %main-txt-font;
+        padding-left: 72px;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            width: 56px;
+            height: 8px;
+            background: $main-fn-color;
+            top: 6px;
+            left: 0;
+        }
+    }
+
+    &__img {
+        @extend %img;
+    }
+
+    @media (max-width: 480px) {
+        &__img {
+           display: none;
+        }
+    }
+}
+
